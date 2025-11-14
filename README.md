@@ -29,13 +29,5 @@ A estrutura segue o padrão de aplicações web, separando responsabilidades:
 
 ---
 
-## 🚀 Como Executar o Projeto
 
-Siga estes passos no seu terminal, a partir da pasta raiz do projeto:
 
-### 1. Instalar as Dependências
-
-Caso a pasta `node_modules` tenha sido excluída (o que é recomendado), você precisa reinstalar o Express e o EJS:
-
-```bash
-npm install
