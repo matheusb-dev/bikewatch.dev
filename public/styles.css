@@ -1,0 +1,246 @@
+/* public/styles.css */
+
+/* Variáveis e Cores do Estilo Takorii */
+
+:root {
+    --matheusb-dev-bg: #4CAF50;    /* 🟢 Seu Novo Verde principal */
+    --matheusb-dev-text: #ccc;
+    --matheusb-dev-accent: #b5b5b5; 
+    --matheusb-dev-strong: #ffffff; 
+    --matheusb-dev-link: #ffffff; 
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    --matheusb-dev-bg: #1c1c1e; /* Note: Aqui o BG é o cinza escuro do modo escuro */
+    --matheusb-dev-text: #f2f2f7;
+    --matheusb-dev-accent: #3a3a3c;
+    --matheusb-dev-strong: #00C853; /* Seu Novo Destaque Verde */
+    --matheusb-dev-link: #00C853; 
+}
+
+/* ... restante do código ... */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--matheusb-dev-accent);
+    color: var(--matheusb-dev-text);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.site-header {
+    background-color: var(--matheusb-dev-bg);
+    color: var(--matheusb-dev-strong);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--matheusb-dev-accent);
+}
+
+.site-header h1 {
+    font-weight: 500;
+    font-size: 2em;
+    margin: 0;
+}
+
+.action-bar {
+    background-color: var(--matheusb-dev-bg);
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--matheusb-dev-accent);
+}
+
+.action-btn, .theme-toggle-btn {
+    background: var(--matheusb-dev-accent);
+    color: var(--matheusb-dev-text);
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.action-btn:hover, .theme-toggle-btn:hover {
+    background-color: var(--matheusb-dev-strong);
+    color: var(--matheusb-dev-bg);
+}
+
+.action-btn.active {
+    background-color: var(--matheusb-dev-strong);
+    color: var(--matheusb-dev-bg);
+    font-weight: 500;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.wrapper p {
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.wrapper p strong {
+    color: var(--matheusb-dev-strong);
+    font-weight: 500;
+}
+
+.calm-down {
+    text-align: right;
+    font-size: 50px;
+    color: var(--matheusb-dev-text);
+    margin: 50px 0;
+}
+
+/* CARD COM EFEITO LIQUID GLASS */
+.liquid-glass-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* LAYOUT LIMPO para Blog/Rotas GPX */
+.clean-layout {
+    background: none;
+    border: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.content h2 {
+    color: var(--matheusb-dev-strong);
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--matheusb-dev-bg);
+    padding-bottom: 10px;
+}
+
+.content section {
+    margin-bottom: 40px;
+}
+
+.content h3 {
+    color: var(--matheusb-dev-bg);
+    font-size: 1.5em;
+    border-left: 5px solid var(--matheusb-dev-strong);
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+/* Lista de Especificações (Specs) */
+.specs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.specs-list li {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 3px solid var(--matheusb-dev-bg);
+    transition: background-color 0.3s;
+}
+
+.specs-list li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Lista do Blog/Posts */
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--matheusb-dev-accent);
+    padding-bottom: 10px;
+}
+
+.blog-date {
+    display: block;
+    font-size: 0.9em;
+    color: var(--matheusb-dev-bg);
+}
+
+.blog-title {
+    font-size: 1.5em;
+    color: var(--matheusb-dev-link);
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.blog-title:hover {
+    color: var(--matheusb-dev-bg);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: var(--matheusb-dev-bg);
+    color: var(--matheusb-dev-strong);
+    border-top: 5px solid var(--matheusb-dev-accent);
+}
+
+.pulser {
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+}
+
+/* Estilos Caóticos de Fundo */
+.zone {
+    background:repeating-linear-gradient(3deg, var(--matheusb-dev-accent) 0, var(--matheusb-dev-accent) 4px, var(--matheusb-dev-bg) 4px, var(--matheusb-dev-bg) 16px);
+    position:fixed;
+    width:33vw;
+    height:33vw;
+    left:0;
+    top:0;
+    mix-blend-mode:saturation;
+    z-index:-1;
+}
+.zone2 {
+    position:absolute;
+    top:50%;
+    right:0;
+    width:400px;
+    height:400px;
+    background:repeating-linear-gradient(5deg, var(--matheusb-dev-accent) 0, var(--matheusb-dev-accent) 1px, var(--matheusb-dev-bg) 1px, var(--matheusb-dev-bg) 5px);
+    border-radius:400px;
+    z-index:-2;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .blog-list { width: 95%; }
+    .blog-list li { font-size: 20px; }
+    .zone, .zone2 { display: none; } 
+    .site-header h1 { font-size: 1.5em; }
+    .action-btn { font-size: 12px; padding: 6px 10px; margin: 3px; }
+}
